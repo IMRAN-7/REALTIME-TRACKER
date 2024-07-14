@@ -23,7 +23,7 @@ io.on("connection",function(socket){
     io.emit("receive-location",{id:socket.id,...data});
     });
     socket.on("disconnect",function(){
-        io.emit("user-disconnected",socket.id);
+        io.emit("user-disconnected",socket.id);                        // for disconnected user
     });
 });
 
